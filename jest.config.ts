@@ -7,6 +7,7 @@ export default {
   },
   collectCoverageFrom: [
     'src/**/*.ts',
-    '!src/index.ts',
+    '!src/**/index.ts',
+    '!src/**/http.ts',
   ],
 }
