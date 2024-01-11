@@ -18,7 +18,7 @@ export class Product {
     name: Joi.string().required(),
     isMarketable: Joi.boolean(),
     inventory: Joi.object({
-      quantity: Joi.number().required(),
+      quantity: Joi.number(),
       warehouses: Joi.array().items(
         Joi.object({
           locality: Joi.string().required(),
