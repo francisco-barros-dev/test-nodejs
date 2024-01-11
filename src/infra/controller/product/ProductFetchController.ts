@@ -9,7 +9,8 @@ export class ProductFetchController extends Controller {
     super()
   }
 
-  async handle(_: any): Promise<HttpResponse<ProductOutput>> {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  async handle(request: any): Promise<HttpResponse<ProductOutput>> {
     try {
 
       const products = await this.productFetchService.handle()
