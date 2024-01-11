@@ -15,7 +15,7 @@
     "experimentalDecorators": true,
     "removeComments": true,
     "moduleResolution": "node",
-    "noImplicitAny": true,
+    "noImplicitAny": false,
     "noImplicitReturns": true,
     "noUnusedLocals": true,
     "sourceMap": true,

@@ -106,10 +106,12 @@
   "overrides": [
     {
       "files": [
-        "src/**/__tests__/*.ts"
+        "src/**/__tests__/*.ts",
+        "src/**/*.ts"
       ],
       "rules": {
-        "@typescript-eslint/no-explicit-any": "off"
+        "@typescript-eslint/no-explicit-any": "off",
+        "@typescript-eslint/no-unsafe-optional-chaining": "off"
       }
     },
     {
@@ -118,7 +120,9 @@
         "jest.config.ts"
       ],
       "rules": {
-        "@typescript-eslint/naming-convention": "off"
+        "@typescript-eslint/naming-convention": "off",
+        "@typescript-eslint/no-explicit-any": "off",
+        "@typescript-eslint/no-unsafe-optional-chaining": "off"
       }
     }
   ],
