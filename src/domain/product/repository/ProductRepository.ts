@@ -1,4 +1,4 @@
-import { Product } from '@/domain/product/entity'
+import { Product } from '../entity'
 
 export interface IProductFetchRepository {
   fetch(): Promise<Product[]>
@@ -9,7 +9,7 @@ export interface IProductFindRepository {
 }
 
 export interface IProductCreateRepository {
-  create(input: Product): Promise<Product>
+  create(input: Product): Promise<Product | undefined>
 }
 
 export interface IProductUpdateRepository {
