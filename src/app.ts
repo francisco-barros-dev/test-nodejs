@@ -9,6 +9,7 @@ import {
   productFindRouter,
   productFetchRouter,
   productRemoveRouter,
+  productUpdateRouter,
 } from './main/router'
 
 const app = express()
@@ -23,5 +24,6 @@ productCreateRouter(app)
 productFindRouter(app)
 productFetchRouter(app)
 productRemoveRouter(app)
+productUpdateRouter(app)
 
 export default app
