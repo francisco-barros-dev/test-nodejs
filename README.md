@@ -72,3 +72,33 @@ Crie endpoints para as seguintes ações:
 
 - Os produtos podem ficar em memória, não é necessário persistir os dados
 - Testes são sempre bem-vindos :smiley:
+  
+### Como rodar a aplicação em ambiente de desenvolvimento
+
+#### Criar .env:
+
+Criar o arquivo `.env` copiado do `.env.example`. Preencher porta e host;
+
+#### Instalação das dependências:
+```sh
+npm install
+```
+
+#### Rodar a aplicação:
+```sh
+npm start
+```
+
+### Como rodar os testes:
+```sh
+$ npm  test
+```
+
+#### A aplicação rodará por default na porta 8000:
+```sh
+http://localhost:8000
+```
+
+### 2. Como fazer requsição no Postman:
+
+Para facilitar o uso da aplicação, pode-se importar o arquivo `Product.postman_collection.json` que se encontra na pasta`/.postman` 
