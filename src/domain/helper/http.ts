@@ -1,19 +1,19 @@
-export interface HttpResponse<T = unknown> {
+export interface HttpResponse<T = any> {
   statusCode: number
   data: T
 }
 
-export const ok = <T = unknown> (data: T): HttpResponse<T> => ({
+export const ok = <T = any> (data: T): HttpResponse<T> => ({
   statusCode: 200,
   data,
 })
 
-export const created = <T = unknown> (data: T): HttpResponse<T> => ({
+export const created = <T = any> (data: T): HttpResponse<T> => ({
   statusCode: 201,
   data,
 })
 
-export const noContent = <T = unknown> (data: T): HttpResponse<T> => ({
+export const noContent = <T = any> (data: T): HttpResponse<T> => ({
   statusCode: 204,
   data,
 })
