@@ -1,4 +1,4 @@
-import { Product } from '@/domain/product/entity'
+import { Product } from '../entity'
 import { IProductFindRepository } from '@/domain/product/repository'
 
 export interface IProductFindService {
@@ -12,11 +12,6 @@ export class ProductFindService implements IProductFindService {
 
   async handle(sku: number): Promise<Product | undefined> {
     const product = await this.productFindRepository.find(sku)
-
-    if (!product) {
-      throw new Error('Product not found')
-    }
-
     return product
   }
 }

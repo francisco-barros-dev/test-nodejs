@@ -1,6 +1,6 @@
 import {
   ProductFetchService,
-} from '@/domain/product/useCase'
+} from '../ProductFetchService'
 
 import { type IProductFetchRepository } from '@/domain/product/repository'
 

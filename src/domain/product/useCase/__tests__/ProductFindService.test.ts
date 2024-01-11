@@ -1,6 +1,6 @@
 import {
   ProductFindService,
-} from '@/domain/product/useCase'
+} from '../ProductFindService'
 
 import { type IProductFindRepository } from '@/domain/product/repository'
 
@@ -54,15 +54,5 @@ describe('ProductFindService:handle', () => {
     const output = await service.handle(input)
 
     expect(output).toStrictEqual(mockedProduct)
-  })
-
-  it('should throw if a product is not found', async (): Promise<void> => {
-    jest.spyOn(productFindRepository, 'find').mockResolvedValue(undefined)
-    const service = makeService()
-    const expectedError = new Error('Product not found')
-
-    await expect(service.handle(input))
-      .rejects
-      .toThrow(expectedError)
   })
 })

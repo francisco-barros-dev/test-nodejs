@@ -1,6 +1,6 @@
 import {
   ProductUpdateService,
-} from '@/domain/product/useCase'
+} from '../ProductUpdateService'
 
 import { type IProductUpdateRepository, type IProductFindRepository } from '@/domain/product/repository'
 

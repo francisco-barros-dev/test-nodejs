@@ -1,9 +1,9 @@
 import {
   ProductCreateService,
-} from '@/domain/product/useCase'
+} from '../ProductCreateService'
 
 import { type IProductCreateRepository } from '@/domain/product/repository'
-import { Product } from '@/domain/product/entity'
+import { Product } from '../../entity'
 
 let productCreateRepository: IProductCreateRepository
 

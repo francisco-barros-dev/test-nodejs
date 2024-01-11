@@ -1,4 +1,4 @@
-import { Product } from '@/domain/product/entity'
+import { Product } from '../entity'
 import { IProductFindRepository, IProductUpdateRepository } from '@/domain/product/repository'
 
 export interface IProductUpdateService {
