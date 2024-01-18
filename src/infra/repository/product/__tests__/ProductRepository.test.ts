@@ -111,6 +111,33 @@ describe('ProductRepository', () => {
     expect(updatedProduct).toBeUndefined()
   })
 
+  it('Should set isMarketable with false', async (): Promise<void> => {
+
+    const productToBeUpdated = new Product({
+      sku: 11,
+      name: 'Quasar perfume',
+      inventory: {
+        warehouses: [
+          {
+            locality: 'RJ',
+            quantity: -1,
+            type: 'ECOMMERCE',
+          },
+          {
+            locality: 'COPACABANA',
+            quantity: 0,
+            type: 'PHYSICAL_STORE',
+          },
+        ],
+      },
+    } as Product, false)
+
+    await productRepository.create(productToBeUpdated)
+    const updatedProduct = await productRepository.update(productToBeUpdated)
+    expect(updatedProduct?.isMarketable).toBeFalsy()
+
+  })
+
   it('Should remove an existing product', async (): Promise<void> => {
     const existingProduct = await productRepository.create(mockedProducts[0])
     await productRepository.remove(existingProduct?.sku as number)
