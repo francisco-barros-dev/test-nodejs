@@ -33,7 +33,8 @@ export class ProductRepository implements
 
   private handleMarketableProduct(product: Product) : Product {
     const hasInventoryQuantity = product?.inventory?.quantity ?? 0
-    if (hasInventoryQuantity) {
+
+    if (hasInventoryQuantity && hasInventoryQuantity > 0) {
       product.isMarketable = true
     }
     return product
